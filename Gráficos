@@ -1,0 +1,240 @@
+\documentclass[12pt,letterpaper]{article}
+
+% ===================== PAQUETES =====================
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{pgfgantt}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\pgfplotsset{compat=1.18}
+\geometry{margin=2.5cm}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
+
+% ===================== DATOS =====================
+\newcommand{\nombreProyecto}{VitalCode: Entorno Virtual de Primeros Auxilios Psicológicos}
+\newcommand{\nombreCurso}{Ingeniería y Desarrollo Sustentable/Sostenible}
+\newcommand{\docentes}{Pía Del Canto C. -- Aracelly Aravena F.}
+\newcommand{\ayudantes}{Anyel Cortés -- Jorge Herrera}
+\newcommand{\grupo}{VitalCode}
+\newcommand{\integrantes}{Elliot Bravo, Catalina Rojas, Matías Collao, Benjamín Cortés}
+\newcommand{\fecha}{Mayo 2026}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\grupo}
+\rhead{Informe de Avance IDS}
+\cfoot{\thepage}
+
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.5em}{}
+
+\begin{document}
+
+% ===================== PORTADA =====================
+\begin{titlepage}
+    \centering
+    \vspace*{1cm}
+    {\Large \textbf{\nombreCurso}}\\[0.4cm]
+    {\large Primer Entregable -- Informe de Avance}\\[1.5cm]
+    {\Huge \textbf{\nombreProyecto}}\\[1cm]
+    {\Large \textbf{Grupo:} \grupo}\\[0.4cm]
+    {\large \textbf{Integrantes:} \integrantes}\\[0.4cm]
+    {\large \textbf{Docentes:} \docentes}\\[0.2cm]
+    {\large \textbf{Ayudantes:} \ayudantes}\\[1cm]
+    {\large \textbf{ODS principal:} ODS 3 -- Salud y Bienestar}\\[2cm]
+    {\large \fecha}
+    \vfill
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% ===================== RESUMEN =====================
+\section*{Resumen}
+\addcontentsline{toc}{section}{Resumen}
+El presente informe desarrolla la propuesta \textit{VitalCode}, una aplicación orientada a la salud mental adolescente mediante recursos digitales de primeros auxilios psicológicos. El proyecto se vincula con el ODS 3 (Salud y Bienestar) para reducir barreras de acceso y estigma. Es una solución digital de bajo impacto material, planteada como alternativa sostenible frente a infraestructuras presenciales.
+
+\textbf{Palabras clave:} salud mental, ODS 3, aplicación, entorno virtual, primeros auxilios psicológicos, sostenibilidad.
+
+\newpage
+
+% ===================== 1 CONTEXTO =====================
+\section{Contexto del proyecto}
+
+\subsection{Descripción general de la empresa}
+\textbf{VitalCode} es una empresa de base tecnológica social para el bienestar psicológico adolescente. El producto es una aplicación con entorno virtual (Unity o Roblox Studio) donde usuarios acceden anónimamente a recursos de apoyo emocional. Es una solución preventiva y educativa que no reemplaza la atención profesional.
+
+\subsection{Estructura organizacional}
+\begin{table}[H]
+\centering
+\caption{Estructura organizacional propuesta para VitalCode}
+\begin{tabularx}{\textwidth}{p{4cm} X p{2.2cm}}
+\toprule
+\textbf{Cargo / área} & \textbf{Función principal} & \textbf{Cantidad} \\
+\midrule
+Dirección general & Coordinar estrategia y alianzas. & 1 \\
+Jefatura de proyecto & Planificación y presupuesto. & 1 \\
+Psicólogo/a asesor/a & Validar contenidos y protocolos. & 1 \\
+Especialista salud mental & Pertinencia ética. & 1 \\
+Desarrolladores/as & Programación de la App. & 2 \\
+Diseñador/a UX/UI & Accesibilidad y seguridad. & 1 \\
+Ciberseguridad & Privacidad de datos. & 1 \\
+Estudiantes en práctica & Apoyo y documentación. & 2 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+% ===================== 2 PROBLEMA =====================
+\section{Descripción del problema u oportunidad}
+La salud mental adolescente presenta barreras como el temor al juicio y falta de recursos tempranos. El ODS 3 busca garantizar vida sana; considerando que más de 700.000 personas mueren por suicidio anualmente, se prioriza la prevención digital.
+
+% ===================== 3 ANALISIS ENTORNO =====================
+\section{Análisis del entorno}
+
+\subsection{Análisis FODA}
+\begin{table}[H]
+\centering
+\caption{Análisis FODA del proyecto VitalCode}
+\begin{tabularx}{\textwidth}{p{3cm} X}
+\toprule
+\textbf{Dimensión} & \textbf{Elementos principales} \\
+\midrule
+Fortalezas & Bajo costo, anonimato, alineación ODS 3. \\
+Oportunidades & Escalabilidad, alianzas educativas. \\
+Debilidades & Dependencia de conectividad, no es terapia clínica. \\
+Amenazas & Regulaciones de datos, brecha digital. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+% ===================== 4 PLANEACION =====================
+\section{Planeación administrativa del proyecto}
+
+\subsection{Presupuesto estimado}
+\begin{table}[H]
+\centering
+\caption{Presupuesto preliminar del proyecto}
+\begin{tabularx}{\textwidth}{X r}
+\toprule
+\textbf{Ítem} & \textbf{Costo estimado (CLP)} \\
+\midrule
+Licencias y Gráficos & 30.000 \\
+Dominio y Hosting & 25.000 \\
+Difusión Encuesta & 10.000 \\
+Asesoría Salud Mental & 80.000 \\
+Imprevistos & 30.000 \\
+\midrule
+\textbf{Total estimado} & \textbf{175.000} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+% --- GRÁFICO 1: DISTRIBUCIÓN DEL PRESUPUESTO ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    bar width=20pt,
+    ylabel={Costo en CLP},
+    symbolic x coords={Licencias, Hosting, Difusión, Asesoría, Otros},
+    xtick=data,
+    nodes near coords,
+    ymin=0, ymax=100000,
+    width=0.8\textwidth,
+    height=6cm,
+    axis x line*=bottom,
+    axis y line*=left,
+    enlarge x limits=0.15,
+]
+\addplot[fill=blue!40] coordinates {(Licencias,30000) (Hosting,25000) (Difusión,10000) (Asesoría,80000) (Otros,30000)};
+\end{axis}
+\end{tikzpicture}
+\caption{Distribución visual del presupuesto estimado.}
+\end{figure}
+
+\subsection{Cronograma preliminar}
+\begin{figure}[H]
+\centering
+\begin{ganttchart}[
+    hgrid, vgrid, x unit=0.8cm, y unit chart=0.55cm,
+    title height=1, bar height=0.6
+]{1}{8}
+\gantttitle{Semanas}{8} \\
+\gantttitlelist{1,...,8}{1} \\
+\ganttbar{Encuesta}{1}{2} \\
+\ganttbar{Diseño UX}{2}{3} \\
+\ganttbar{Prototipo}{3}{6} \\
+\ganttbar{Informe}{7}{8}
+\end{ganttchart}
+\caption{Carta Gantt preliminar.}
+\end{figure}
+
+% ===================== 5 ENCUESTA =====================
+\section{Encuesta}
+
+\subsection{Resultados preliminares}
+\begin{table}[H]
+\centering
+\caption{Resultados cuantitativos (N=25)}
+\begin{tabularx}{\textwidth}{X c}
+\toprule
+\textbf{Indicador} & \textbf{Resultado (\%)} \\
+\midrule
+Interés en App anónima & 88\% \\
+Importancia del anonimato & 92\% \\
+Uso de ejercicios de respiración & 75\% \\
+Preferencia por recursos educativos & 64\% \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+% --- GRÁFICO 2: INTERÉS EN FUNCIONALIDADES ---
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    xbar,
+    xlabel={Porcentaje de Aceptación (\%)},
+    symbolic y coords={Educación, Respiración, Anonimato, Interés Gral.},
+    ytick=data,
+    nodes near coords,
+    nodes near coords align={horizontal},
+    xmin=0, xmax=100,
+    width=0.8\textwidth,
+    height=6cm,
+    enlarge y limits=0.2,
+]
+\addplot[fill=green!40] coordinates {(64,Educación) (75,Respiración) (92,Anonimato) (88,Interés Gral.)};
+\end{axis}
+\end{tikzpicture}
+\caption{Nivel de interés por funcionalidad según encuesta.}
+\end{figure}
+
+% ===================== CONCLUSIONES =====================
+\section{Conclusiones preliminares}
+VitalCode responde a la necesidad de salud mental preventiva. El éxito del proyecto depende de la validación profesional de los contenidos y del análisis de la encuesta para ajustar el prototipo funcional en Unity/Roblox.
+
+% ===================== REFERENCIAS =====================
+\newpage
+\section*{Referencias}
+\addcontentsline{toc}{section}{Referencias}
+Organización Mundial de la Salud. (2019). \textit{Suicide worldwide in 2019}. OMS. \\
+Organización de las Naciones Unidas. (s. f.). \textit{Objetivo 3: Salud y Bienestar}. \\
+Universidad Católica del Norte. (2026). \textit{Ingeniería y Desarrollo Sustentable}.
+
+\end{document}
