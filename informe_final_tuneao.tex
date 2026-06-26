@@ -106,9 +106,9 @@ Analista de Ciberseguridad & Protección de datos sensibles y cumplimiento norma
 % ===================== 2 PROBLEMA =====================
 \section{Descripción del problema y oportunidad}
 
-La salud mental adolescente constituye una problemática social severa en Chile. El acceso oportuno está limitado por barreras económicas, estigma social y la saturación del sistema público. Además, el fenómeno de la "ecoansiedad" afecta desproporcionadamente a jóvenes en zonas vulnerables. 
+La alta prevalencia de crisis de ansiedad y estrés en jóvenes chilenos constituye una problemática social severa. El acceso oportuno a la salud mental está severamente limitado por barreras económicas, estigma social y la saturación del sistema público.
 
-\textbf{Oportunidad:} El alto nivel de penetración de smartphones permite entregar una herramienta de Primeros Auxilios Psicológicos (PAP) asíncrona y de bolsillo. La solución no reemplaza la terapia clínica, pero actúa como un mecanismo preventivo crítico para evitar que crisis de ansiedad escalen a urgencias médicas (ODS 3).
+\textbf{Oportunidad:} La altísima tasa de presencia de smartphones en la población joven permite entregar una herramienta de Primeros Auxilios Psicológicos (PAP) asíncrona, anónima y de bolsillo. Esta solución tiene un impacto directo en el \textbf{ODS 3 (Salud y Bienestar)} promoviendo la contención emocional inicial, y adicionalmente, democratiza el acceso a herramientas de salud, impactando positivamente en el \textbf{ODS 10 (Reducción de las Desigualdades)}.
 
 % ===================== 3 ANALISIS ENTORNO =====================
 \section{Análisis del entorno}
@@ -150,8 +150,29 @@ La salud mental adolescente constituye una problemática social severa en Chile.
     \item \textbf{Recursos Humanos:} Detallados en la estructura organizacional (Ingenieros, psicólogos clínicos, diseñador UX/UI).
 \end{itemize}
 
+\subsection{Presupuesto estimado}
+Para la ejecución del proyecto, se ha definido una estructura de costos basada en un modelo operativo eficiente de software, priorizando los servicios en la nube bajo demanda y la validación profesional de contenidos.
+
+\begin{table}[H]
+\centering
+\caption{Presupuesto estimado del proyecto VitalCode (CLP)}
+\begin{tabularx}{\textwidth}{X r}
+\toprule
+\textbf{Ítem} & \textbf{Costo estimado (CLP)} \\
+\midrule
+Infraestructura Cloud (Firebase/EAS) & 120.000 \\
+Honorarios Asesoría Clínica (Psicólogo) & 250.000 \\
+Licencias de software y herramientas & 80.000 \\
+Marketing y difusión digital & 100.000 \\
+Imprevistos (10\%) & 55.000 \\
+\midrule
+\textbf{TOTAL ESTIMADO} & \textbf{605.000} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
 \subsection{Cronograma (Carta Gantt)}
-Para la ejecución del proyecto VitalCode, se estructuró un cronograma de 14 semanas de trabajo, iniciando con la ideación a fines de marzo y culminando con la presentación del prototipo y entrega final a fines de junio.
+Para la ejecución del proyecto VitalCode, se estructuró un cronograma de 13 periodos de trabajo, iniciando con la ideación a fines de marzo y culminando con la presentación del prototipo y entrega final a fines de junio.
 
 \begin{figure}[H]
 \centering
@@ -163,26 +184,26 @@ x unit=0.8cm,
 y unit chart=0.55cm,
 title height=1,
 bar height=0.6,
-bar/.append style={fill=blue!40, rounded corners=2pt}
-]{1}{14}
-% Títulos de los meses (aprox. semanas por mes)
-\gantttitle{Marzo}{1} \gantttitle{Abril}{4} \gantttitle{Mayo}{4} \gantttitle{Junio}{5} \\
-% Número de semanas
-\gantttitlelist{1,...,14}{1} \\
-% Tareas
-\ganttbar{Lluvia de ideas y levantamiento}{1}{2} \\
-\ganttbar{Análisis del problema (ODS 3)}{2}{3} \\
-\ganttbar{Formalización de la idea (VitalCode)}{4}{5} \\
-\ganttbar{Encuestas y Validación de campo}{5}{7} \\
-\ganttbar{Análisis Estratégico (FODA, PESTEL, Porter)}{7}{9} \\
-\ganttbar{Diseño de Interfaz UX/UI (Prototipo)}{8}{10} \\
-\ganttbar{Integración Sostenibilidad y QHSEC}{10}{11} \\
-\ganttbar{Refinamiento de Maqueta (Figma)}{11}{13} \\
-\ganttbar{Redacción Informe Final (LaTeX)}{12}{13} \\
-\ganttbar{Preparación Defensa y Entrega (26 Jun)}{14}{14}
+bar/.append style={fill=green!80, rounded corners=2pt}
+]{1}{13}
+% Títulos de los meses
+\gantttitle{Marzo}{1} \gantttitle{Abril}{4} \gantttitle{Mayo}{4} \gantttitle{Junio}{4} \\
+% Número de semanas / periodos
+\gantttitlelist{1,...,13}{1} \\
+% Tareas alineadas según la imagen
+\ganttbar{1. Lluvia de ideas y planteamiento}{1}{2} \\
+\ganttbar{2. Análisis del problema (ODS 3)}{2}{3} \\
+\ganttbar{3. Formalización de la idea (VitalCode)}{4}{5} \\
+\ganttbar{4. Encuestas de validación}{5}{6} \\
+\ganttbar{5. Análisis estratégico (FODA, PESTEL, Porter)}{6}{8} \\
+\ganttbar{6. Diseño de Interfaz UI/UX (Prototipo)}{7}{9} \\
+\ganttbar{7. Integración, Sostenibilidad y QHSEC}{9}{10} \\
+\ganttbar{8. Refinamiento de Maqueta}{9}{11} \\
+\ganttbar{9. Redacción de informe final}{11}{12} \\
+\ganttbar{10. Preparación de defensa y Entrega final}{13}{13}
 \end{ganttchart}
 }
-\caption{Carta Gantt detallada del proyecto VitalCode (Fines de Marzo - Junio 2026).}
+\caption{Carta Gantt detallada del proyecto VitalCode.}
 \end{figure}
 
 % ===================== 5 PRODUCCION LIMPIA =====================
@@ -193,9 +214,7 @@ VitalCode opera bajo un modelo de \textbf{teletrabajo híbrido}. La sede corpora
 
 \begin{figure}[H]
 \centering
-\fbox{\rule{0pt}{1.5in} \rule{0.8\linewidth}{0pt}}
-% NOTA PARA LOS ESTUDIANTES: Reemplazar el código de arriba por su imagen real del mapa usando: 
-% \includegraphics[width=0.8\textwidth]{nombre_del_mapa.png}
+\includegraphics[width=0.8\textwidth]{image.png}
 \caption{Mapa de localización referencial - Centro de Coworking, Coquimbo.}
 \end{figure}
 
@@ -205,6 +224,7 @@ Al ser una aplicación digital, el enfoque de Producción Limpia se rige por la 
     \item \textbf{Eficiencia Cross-Platform (Arquitectura Expo):} Al utilizar React Native y Expo, la aplicación emplea un único código base que compila simultáneamente para Android e iOS. Esto reduce drásticamente las horas de cómputo necesarias y el consumo energético en servidores, al no tener que mantener ni compilar dos repositorios de código por separado.
     \item \textbf{Diseño Eficiente (Dark Mode):} La interfaz utiliza fondos oscuros por defecto, apagando píxeles en pantallas OLED. Esto minimiza el consumo de batería y prolonga la vida útil del smartphone, retrasando la generación de chatarra electrónica (\textit{e-waste}).
     \item \textbf{Desmaterialización Logística:} La distribución netamente digital a través de App Stores elimina el transporte físico, embalajes plásticos y las emisiones de Gases de Efecto Invernadero (GEI) de las cadenas de suministro.
+    \item \textbf{Hosting Sustentable (Cloud Computing):} La base de datos y el backend operan bajo Firebase (Google Cloud), un proveedor que garantiza igualar el 100\% del consumo eléctrico de sus centros de datos con compras de energía renovable, mitigando la huella de la etapa operativa.
 \end{itemize}
 
 % ===================== 6 QHSEC Y CICLO DE VIDA =====================
@@ -220,33 +240,51 @@ La gestión de VitalCode se sustenta en principios normativos de calidad, ambien
 \toprule
 \textbf{Dimensión} & \textbf{Plan de Gestión (Concordancia Normativa)} \\
 \midrule
-\textbf{Q (Calidad)} & \textit{Base ISO 9001:} Validación estricta de todos los ejercicios por psicólogos clínicos para asegurar efectividad en la contención del usuario. \\
-\textbf{H (Salud)} & Prevención de riesgos ergonómicos (fatiga visual) y síndrome de \textit{burnout} en los desarrolladores mediante pausas activas. \\
-\textbf{S (Seguridad)} & \textit{Base ISO 45001:} Ciberseguridad extrema. Encriptación asimétrica de datos médicos para evitar filtraciones y resguardar la identidad. \\
-\textbf{E (Ambiente)} & \textit{Base ISO 14001:} Alojamiento en Data Centers que garanticen neutralidad de carbono o uso de energías 100\% renovables. \\
-\textbf{C (Comunidad)} & Aporte directo al ODS 3, descongestionando la red pública de urgencias y acercando bienestar a zonas de sacrificio. \\
+\textbf{Q (Calidad)} & \textit{Base ISO 9001:} Validación estricta de todos los ejercicios por profesionales de la salud para asegurar efectividad. \\
+\textbf{H (Salud)} & Prevención de riesgos ergonómicos y síndrome de \textit{burnout} en los desarrolladores mediante pausas activas y desconexión digital. \\
+\textbf{S (Seguridad)} & \textit{Base ISO 45001:} Protección de datos sensibles con encriptación de extremo a extremo en Firebase y uso de avatares para no exponer identidad real. \\
+\textbf{E (Ambiente)} & \textit{Base ISO 14001:} Operación con impacto minimizado alojando el backend en Google Cloud (100\% energías renovables). \\
+\textbf{C (Comunidad)} & Aporte directo al ODS 3, descongestionando la red pública y democratizando el acceso a contención emocional. \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-\subsection{Cálculo de Huella de Carbono}
-El punto crítico en el ciclo de vida de VitalCode es la etapa de \textbf{Operación (Hosting)}. Para validar este impacto, se utilizó la herramienta \textit{Website Carbon Calculator}. Al optimizar el código (App \textit{Lightweight}), se estima que la transferencia de datos por sesión genera apenas \textbf{0.2 gramos de $CO_2$}, siendo un 70\% más limpia que el promedio de páginas web globales gracias al uso de infraestructura en la nube ecológica.
+\subsection{Gestión de Huellas y Ciclo de Vida}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Huella de Carbono (Operación):} Es el punto crítico. Se mitiga mediante el alojamiento en servidores Cloud ecológicos. Utilizando \textit{Website Carbon Calculator}, se estima una huella de apenas 0.2g de $CO_2$ por sesión.
+    \item \textbf{Huella Hídrica:} Virtualmente cero, dado que no existen procesos de manufactura física ni refrigeración industrial propia.
+    \item \textbf{Ciclo de Uso (Dark Mode):} La interfaz oscura por defecto apaga píxeles en pantallas OLED, reduciendo el consumo de batería y prolongando la vida útil del smartphone del usuario.
+    \item \textbf{Fin de Vida limpio:} La desinstalación de la aplicación no genera ningún tipo de residuo sólido ni chatarra electrónica (\textit{e-waste}).
+\end{itemize}
 
 % ===================== 7 LEGISLACION =====================
 \section{Legislación Vigente}
 
-Para asegurar la viabilidad legal y ética del proyecto, VitalCode se adhiere a dos marcos regulatorios fundamentales en Chile:
-
 \subsection{Orientada a la Sustentabilidad y Privacidad (Usuarios)}
 \begin{itemize}[leftmargin=*]
-    \item \textbf{Ley N° 19.628 (Protección de la Vida Privada):} Al tratar datos relacionados con la salud mental de menores y jóvenes, el proyecto exige el cumplimiento riguroso de esta ley, anonimizando la información mediante avatares y aplicando encriptación de extremo a extremo para evitar el mal uso de datos sensibles.
+    \item \textbf{Ley N° 19.300 (Bases Generales del Medio Ambiente):} Al ser un proyecto 100\% digital y operar mediante \textit{Coworking}, VitalCode no requiere someterse al SEIA, ya que sus operaciones no generan emisiones directas ni residuos sólidos.
+    \item \textbf{Ley N° 19.628 (Protección de la Vida Privada):} Al tratar datos "sensibles" sobre el estado emocional, se cumple anonimizando perfiles y prohibiendo la comercialización de la base de datos.
+    \item \textbf{Ley N° 20.584 (Derechos y Deberes de los Pacientes):} Se respetan sus principios entregando "Términos y Condiciones" claros, estipulando que la app es de primeros auxilios y no reemplaza un tratamiento psiquiátrico formal.
 \end{itemize}
 
 \subsection{Orientada a la Administración (Trabajadores)}
 \begin{itemize}[leftmargin=*]
-    \item \textbf{Código del Trabajo (Ley N° 21.220 sobre Teletrabajo):} Al operar en un modelo híbrido/remoto, la empresa debe proveer los equipos necesarios (notebooks) y respetar el derecho a desconexión digital de sus programadores.
-    \item \textbf{Ley N° 16.744 (Accidentes del Trabajo y Enfermedades Profesionales):} Cobertura obligatoria para el equipo de desarrollo, enfocándose en la prevención de enfermedades profesionales típicas del sector informático, como tendinitis o problemas de visión.
+    \item \textbf{Ley N° 21.220 (Ley de Teletrabajo):} VitalCode SpA provee las herramientas necesarias y respeta el "Derecho a Desconexión Digital" por un mínimo de 12 horas continuas.
+    \item \textbf{Ley N° 16.744 (Accidentes del Trabajo y Enfermedades Profesionales):} Asegura la afiliación del equipo a una mutualidad para protegerlos frente a riesgos ergonómicos por uso prolongado de pantallas.
+    \item \textbf{Ley N° 21.643 (Ley Karin):} Tratándose de una empresa enfocada en salud mental, es imperativo legal y ético mantener protocolos internos que resguarden la integridad psicológica de los desarrolladores frente al acoso.
 \end{itemize}
+
+% ===================== 8 PROTOTIPO =====================
+\section{Prototipo y Maqueta Funcional}
+Para validar la viabilidad técnica y el cumplimiento de las estrategias de diseño eficiente (\textit{Dark Mode}), se desarrolló una maqueta funcional utilizando el framework de código abierto React Native, compilado a través de Expo. 
+
+\begin{figure}[H]
+\centering
+\fbox{\rule{0pt}{2in} \rule{0.9\linewidth}{0pt}}
+% NOTA: Reemplazar el fbox de arriba con las capturas de la app:
+% \includegraphics[width=0.9\textwidth]{capturas_prototipo.png}
+\caption{Interfaz de usuario (UI) del prototipo VitalCode ejecutándose en entorno móvil.}
+\end{figure}
 
 % ===================== CONCLUSIONES =====================
 \section{Conclusiones Finales}
